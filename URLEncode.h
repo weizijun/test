@@ -12,22 +12,7 @@ public:
 	virtual ~CURLCode(){};
 	static string Encode(const char* lpszData)
 	{
-		string strResult = "";
-		unsigned char* pInTmp = (unsigned char*)lpszData;
-		// do encoding
-		while (*pInTmp)
-		{
-			if(isalnum(*pInTmp))
-				strResult += *pInTmp;
-			else
-				if(isspace(*pInTmp))
-					strResult += '+';
-				else
-				{
-					strResult += '%';
-					strResult += toHex(*pInTmp>>4);
-					strResult += toHex(*pInTmp%16);
-				}
+
 				pInTmp++;
 		}
 
