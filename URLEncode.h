@@ -55,12 +55,3 @@ public:
 		}
 		return strResult;
 	}
-private:
-	inline static unsigned char toHex(const unsigned char &x){ return x > 9 ? x + 55: x + 48; }
-	inline static unsigned char fromHex(const unsigned char &x){ return x > 64 ? x - 55 : x - 48; }
-};
-
-private:
-	inline static unsigned char toHex(const unsigned char &x){ return x > 9 ? x + 55: x + 48; }
-	inline static unsigned char fromHex(const unsigned char &x){ return x > 64 ? x - 55 : x - 48; }
-};
